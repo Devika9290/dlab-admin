@@ -1,145 +1,68 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.5.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-
-// reactstrap components
-import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
-
-// core components
-import PanelHeader from "components/PanelHeader/PanelHeader.js";
+import Table from 'react-bootstrap/Table';
+import { Card, CardBody, CardHeader, CardTitle, Row, Col } from "reactstrap";
+import backgroundImage from './lbmin6.png'; 
 
 function Typography() {
   return (
     <>
-      <PanelHeader size="sm" />
-      <div className="content">
+      <div
+        className="content"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '100vh',
+          padding: '40px',
+        }}
+      >
         <Row>
-          <Col md={12}>
-            <Card>
+          <Col xs={12}>
+            <Card style={{ backgroundColor: 'rgba(255, 255, 255, 0.6)', borderRadius: '10px',margin:"30px",marginLeft:"3px" }}>
               <CardHeader>
-                <h5 className="title">Now Ui Table Heading</h5>
-                <p className="category">Created using Montserrat Font Family</p>
+                <CardTitle tag="h2" className="text-center" style={{ fontSize: "40px", fontWeight: "bold" }}>
+                  FEEDBACKS
+                </CardTitle>
               </CardHeader>
               <CardBody>
-                <div className="typography-line">
-                  <h1>
-                    <span>Header 1</span>The Life of Now Ui Dashboard{" "}
-                  </h1>
-                </div>
-                <div className="typography-line">
-                  <h2>
-                    <span>Header 2</span>The Life of Now Ui Dashboard{" "}
-                  </h2>
-                </div>
-                <div className="typography-line">
-                  <h3>
-                    <span>Header 3</span>The Life of Now Ui Dashboard{" "}
-                  </h3>
-                </div>
-                <div className="typography-line">
-                  <h4>
-                    <span>Header 4</span>The Life of Now Ui Dashboard{" "}
-                  </h4>
-                </div>
-                <div className="typography-line">
-                  <h5>
-                    <span>Header 5</span>The Life of Now Ui Dashboard{" "}
-                  </h5>
-                </div>
-                <div className="typography-line">
-                  <h6>
-                    <span>Header 6</span>The Life of Now Ui Dashboard{" "}
-                  </h6>
-                </div>
-                <div className="typography-line">
-                  <p>
-                    <span>Paragraph</span>I will be the leader of a company that
-                    ends up being worth billions of dollars, because I got the
-                    answers. I understand culture. I am the nucleus. I think
-                    that’s a responsibility that I have, to push possibilities,
-                    to show people, this is the level that things could be at.
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Quote</span>
-                  <blockquote>
-                    <p className="blockquote blockquote-primary">
-                      "I will be the leader of a company that ends up being
-                      worth billions of dollars, because I got the answers. I
-                      understand culture. I am the nucleus. I think that’s a
-                      responsibility that I have, to push possibilities, to show
-                      people, this is the level that things could be at."
-                      <br />
-                      <br />
-                      <small>- Noaa</small>
-                    </p>
-                  </blockquote>
-                </div>
-
-                <div className="typography-line">
-                  <span>Muted Text</span>
-                  <p className="text-muted">
-                    I will be the leader of a company that ends up being worth
-                    billions of dollars, because I got the answers...
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Primary Text</span>
-                  <p className="text-primary">
-                    I will be the leader of a company that ends up being worth
-                    billions of dollars, because I got the answers...
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Info Text</span>
-                  <p className="text-info">
-                    I will be the leader of a company that ends up being worth
-                    billions of dollars, because I got the answers...{" "}
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Success Text</span>
-                  <p className="text-success">
-                    I will be the leader of a company that ends up being worth
-                    billions of dollars, because I got the answers...{" "}
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Warning Text</span>
-                  <p className="text-warning">
-                    I will be the leader of a company that ends up being worth
-                    billions of dollars, because I got the answers...
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Danger Text</span>
-                  <p className="text-danger">
-                    I will be the leader of a company that ends up being worth
-                    billions of dollars, because I got the answers...{" "}
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <h2>
-                    <span>Small Tag</span>
-                    Header with small subtitle <br />
-                    <small>Use "small" tag for the headers</small>
-                  </h2>
-                </div>
+                <Table responsive>
+                  <thead className="text-primary">
+                    <tr>
+                      <th style={{ width: '25%',backgroundColor:"transparent" }}>
+                        <div style={{ border: '1px', padding: '5px' }}><b>PATIENT NAME</b></div>
+                      </th>
+                      <th style={{ width: '25%',backgroundColor:"transparent"  }}><b>LAB NAME</b></th>
+                      <th style={{ width: '25%',backgroundColor:"transparent"  }}><b>DATE</b></th>
+                      <th style={{ width: '25%',backgroundColor:"transparent"  }}><b>FEEDBACK</b></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>Laura</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>Hyatt Labs</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>24-02-2024</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>The clinic was very hygienic and clinic staff were friendly. My visit was pleasant</td>
+                    </tr>
+                    <tr>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>Aardhra </td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>Optigen Labs</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>31-07-2023</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>My visit to the clinic was very upsetting as I had to wait an awful lot of time for a single blood test</td>
+                    </tr>
+                    <tr>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>Devika</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>Riott Innovations</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>01-03-2024</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>It was an ok experience for me as testing duration and waiting period was alright but the staff were unprofessional and just chatting around</td>
+                    </tr>
+                    <tr>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>Naina</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>Hyatt Labs</td>
+                      <td style={{backgroundColor:"transparent" ,fontWeight:"bold"}}>06-02-2024</td>
+                      <td style={{backgroundColor:"transparent",fontWeight:"bold" }}>It was an ok experience for me as testing duration and waiting period was alright but the staff were unprofessional</td>
+                    </tr>
+                  </tbody>
+                </Table>
               </CardBody>
             </Card>
           </Col>

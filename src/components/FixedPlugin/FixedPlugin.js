@@ -19,22 +19,22 @@
 import React, { Component } from "react";
 
 function FixedPlugin(props) {
-  const [classes, setClasses] = React.useState("dropdown show");
-  const handleClick = () => {
-    if (classes === "dropdown") {
-      setClasses("dropdown show");
-    } else {
-      setClasses("dropdown");
-    }
-  };
+  // const [classes, setClasses] = React.useState("dropdown show");
+  // const handleClick = () => {
+  //   if (classes === "dropdown") {
+  //     setClasses("dropdown show");
+  //   } else {
+  //     setClasses("dropdown");
+  //   }
+  // };
   return (
     <div className="fixed-plugin">
-      <div className={classes}>
+      {/* <div className={classes}>
         <div onClick={handleClick}>
           <i className="fa fa-cog fa-2x" />
-        </div>
-        <ul className="dropdown-menu show">
-          <li className="header-title">SIDEBAR BACKGROUND</li>
+        </div> */}
+        {/* <ul className="dropdown-menu show">
+          <li className="header-title"></li>
           <li className="adjustments-line">
             <div className="badge-colors text-center">
               <span
@@ -117,8 +117,8 @@ function FixedPlugin(props) {
               Documentation
             </a>
           </li>
-        </ul>
-      </div>
+        </ul> */}
+      {/* </div> */}
     </div>
   );
 }

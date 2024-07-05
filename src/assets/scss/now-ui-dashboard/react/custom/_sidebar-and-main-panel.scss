@@ -74,7 +74,7 @@
     }
     .logo-tim{
       border-radius: 50%;
-      border: 1px solid #333;
+      border: 1px solid ;
       display: block;
       height: 61px;
       width: 61px;
@@ -102,12 +102,14 @@
                 margin-top: 7px;
             }
 
-            > a,
-            > a:not([href]):not([tabindex]):focus,
+            > a{
+              color: rgb(255, 255, 255);
+            }
+            > a:not([href]):not([tabindex]):focus
             > a:not([href]):not([tabindex]):hover{
                 margin: 10px 15px 0;
                 border-radius: $btn-round-radius;
-                color: $white-color;
+                color: rgb(7, 0, 0);
                 display: block;
                 text-decoration: none;
                 position: relative;
@@ -124,36 +126,35 @@
 
             &:hover:not(.active) > a,
             &:focus:not(.active) > a{
-                background-color: $opacity-1;
+                background-color: none;
+                color:white
             }
 
             &:hover:not(.active) > a i,
             &:focus:not(.active) > a i{
-                color: $white-color;
+                color: black;
             }
 
             &.active > a:not([data-toggle="collapse"]){
-                background-color: $white-color;
-                box-shadow: $box-shadow;
+                background-color: none;
+             
             }
 
             &.active > a[data-toggle="collapse"]{
-              background-color: $opacity-1;
-              box-shadow: none;
-              color: $white-color;
+              background-color:none;
+              color: black;
 
               i{
-                color: $white-color;
+                color: white;
               }
 
               & + div .nav .active a{
                 &:after{
                   content: "";
                   position: absolute;
-                  background-color: $white-color;
+                  background-color: none;
                   border-radius: 30px;
-                  box-shadow: $box-shadow;
-                  color: $primary-color;
+                  color:white;
                   height: 44px;
                   width: calc(100% - 5px);
                   top: 0;
@@ -186,28 +187,28 @@
         }
     }
 
-    .sidebar-background{
-        position: absolute;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        display: block;
-        top: 0;
-        left: 0;
-        background-size: cover;
-        background-position: center center;
+    // .sidebar-background{
+    //     position: absolute;
+    //     z-index: 1;
+    //     height: 100%;
+    //     width: 100%;
+    //     display: block;
+    //     top: 0;
+    //     left: 0;
+    //     background-size: cover;
+    //     background-position: center center;
 
-        &:after{
-            position: absolute;
-            z-index: 3;
-            width: 100%;
-            height: 100%;
-            content: "";
-            display: block;
-            background: #FFFFFF;
-            opacity: 1;
-        }
-    }
+    //     &:after{
+    //         position: absolute;
+    //         z-index: 3;
+    //         width: 100%;
+    //         height: 100%;
+    //         content: "";
+    //         display: block;
+    //         background: none;
+    //         opacity: 1;
+    //     }
+    // }
 
     .logo{
         position: relative;
@@ -241,7 +242,7 @@
             right: 15px;
             height: 1px;
             width: calc(100% - 30px);
-            background-color: $opacity-5;
+            background-color: none;
 
         }
 
@@ -249,7 +250,7 @@
             float: left;
             font-size: 20px;
             margin: 10px 10px;
-            color: $white-color;
+            color: white;
             line-height: 20px;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
@@ -260,7 +261,7 @@
             display: block;
             white-space: nowrap;
             font-size: $font-size-large;
-            color: $white-color;
+            color: white;
             text-decoration: none;
             font-weight: $font-weight-normal;
             line-height: 30px;
@@ -301,7 +302,7 @@
     }
 
     &[data-color="blue"]{
-      @include sidebar-color($info-color);
+      @include sidebar-color(black);
     }
     &[data-color="green"]{
       @include sidebar-color($success-color);
@@ -329,11 +330,11 @@
     .nav {
         > li > a,
         > li > a:hover{
-            color: $white-color;
+            color: none;
         }
 
         > li > a:focus{
-            background: rgba(200, 200, 200, 0.2);
+            background: none;
         }
     }
 }
@@ -344,8 +345,7 @@
     float: right;
     // width: $sidebar-width;
     // width: 100%;
-    background-color: $light-gray;
-    background-color: #ebecf1;
+    background-color: none;
 
     @include transition (0.50s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 

@@ -22,7 +22,7 @@ import { Nav } from "reactstrap";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 
-import logo from "logo-white.svg";
+import logo from "assets/img/pic/lab final.png";
 
 var ps;
 
@@ -47,24 +47,24 @@ function Sidebar(props) {
     };
   });
   return (
-    <div className="sidebar" data-color={props.backgroundColor}>
+    <div className="sidebar">
       <div className="logo">
         <a
-          href="https://www.creative-tim.com?ref=nudr-sidebar"
-          className="simple-text logo-mini"
+          href=""
+          className=""
           target="_blank"
         >
           <div className="logo-img">
-            <img src={logo} alt="react-logo" />
+            <img src={logo} alt="react-logo" style={{maxHeight:"100px",maxWidth:"120px"}} />
           </div>
         </a>
-        <a
-          href="https://www.creative-tim.com?ref=nudr-sidebar"
-          className="simple-text logo-normal"
+        {/* <a
+          href=""
+          className=""
           target="_blank"
         >
           Creative Tim
-        </a>
+        </a> */}
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>
         <Nav>
@@ -79,7 +79,7 @@ function Sidebar(props) {
                 key={key}
               >
                 <NavLink to={prop.layout + prop.path} className="nav-link">
-                  <i className={"now-ui-icons " + prop.icon} />
+                  {/* <i className={"now-ui-icons " + prop.icon} /> */}
                   <p>{prop.name}</p>
                 </NavLink>
               </li>

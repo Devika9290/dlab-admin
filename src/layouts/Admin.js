@@ -34,7 +34,7 @@ var ps;
 
 function Admin(props) {
   const location = useLocation();
-  const [backgroundColor, setBackgroundColor] = React.useState("blue");
+  const [backgroundColor, setBackgroundColor] = React.useState("black");
   const mainPanel = React.useRef();
   React.useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
@@ -60,7 +60,7 @@ function Admin(props) {
     <div className="wrapper">
       <Sidebar {...props} routes={routes} backgroundColor={backgroundColor} />
       <div className="main-panel" ref={mainPanel}>
-        <DemoNavbar {...props} />
+        {/* <DemoNavbar {...props} />  */}
         <Routes>
           {routes.map((prop, key) => {
             return (
@@ -77,7 +77,7 @@ function Admin(props) {
             element={<Navigate to="/admin/dashboard" replace />}
           />
         </Routes>
-        <Footer fluid />
+        {/* <Footer fluid /> */}
       </div>
       <FixedPlugin
         bgColor={backgroundColor}

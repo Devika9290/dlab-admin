@@ -480,7 +480,9 @@ Copyright (c) 2015 Daniel Eden
       color: #1beb11;
       text-decoration: none;
       box-shadow: none; }
-
+      .bttn:hover{
+        background-color: rgb(7, 85, 255);
+     }
 .btn-info {
   background-color: #2CA8FF;
   color: #FFFFFF; }
@@ -2857,13 +2859,13 @@ Created using IcoMoon - icomoon.io
     top: 0;
     left: 0; }
   .sidebar:after,
-  .off-canvas-sidebar:after {
-    background: #888;
+  /* .off-canvas-sidebar:after { */
+    /* background: #888;
     background: -webkit-linear-gradient(#888 0%, #000 80%);
     background: -o-linear-gradient(#888 0%, #000 80%);
     background: -moz-linear-gradient(#888 0%, #000 80%);
     background: linear-gradient(#888 0%, #000 80%);
-    z-index: 3; }
+    z-index: 3; } */
   .sidebar[data-color="blue"]:after,
   .off-canvas-sidebar[data-color="blue"]:after {
     background: #2CA8FF; }
@@ -4419,13 +4421,13 @@ Created using IcoMoon - icomoon.io
     top: 0;
     left: 0; }
   .sidebar:after,
-  .off-canvas-sidebar:after {
+  /* .off-canvas-sidebar:after {
     background: #888;
     background: -webkit-linear-gradient(#888 0%, #000 80%);
     background: -o-linear-gradient(#888 0%, #000 80%);
     background: -moz-linear-gradient(#888 0%, #000 80%);
     background: linear-gradient(#888 0%, #000 80%);
-    z-index: 3; }
+    z-index: 3; } */
   .sidebar[data-color="blue"]:after,
   .off-canvas-sidebar[data-color="blue"]:after {
     background: #2CA8FF; }
@@ -4526,9 +4528,9 @@ Created using IcoMoon - icomoon.io
   padding-top: 80px;
   padding-bottom: 45px;
   position: relative;
-  background: #2c2c2c;
+  /* background: #2c2c2c; */
   /* fallback for old browsers */
-  background: linear-gradient(160deg, #2c2c2c 0%, #1f1f1f 100%);
+  /* background: linear-gradient(160deg, #2c2c2c 0%, #1f1f1f 100%); */
   background-size: 105%; }
   .panel-header .header .title {
     color: #FFFFFF; }

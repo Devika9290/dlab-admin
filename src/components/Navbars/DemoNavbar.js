@@ -116,6 +116,7 @@ function DemoNavbar(props) {
           : "navbar-absolute fixed-top " +
             (color === "transparent" ? "navbar-transparent " : "")
       }
+      style={{backgroundColor:"#0a9a73"}}
     >
       <Container fluid>
         <div className="navbar-wrapper">
@@ -131,7 +132,7 @@ function DemoNavbar(props) {
               <span className="navbar-toggler-bar bar3" />
             </button>
           </div>
-          <NavbarBrand href="/">{getBrand()}</NavbarBrand>
+          {/* <NavbarBrand href="/">{getBrand()}</NavbarBrand> */}
         </div>
         <NavbarToggler onClick={toggle}>
           <span className="navbar-toggler-bar navbar-kebab" />
@@ -139,7 +140,7 @@ function DemoNavbar(props) {
           <span className="navbar-toggler-bar navbar-kebab" />
         </NavbarToggler>
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
-          <form>
+          {/* <form>
             <InputGroup className="no-border">
               <Input placeholder="Search..." />
               <InputGroupAddon addonType="append">
@@ -148,41 +149,41 @@ function DemoNavbar(props) {
                 </InputGroupText>
               </InputGroupAddon>
             </InputGroup>
-          </form>
+          </form> */}
           <Nav navbar>
-            <NavItem>
+            {/* <NavItem>
               <Link to="#pablo" className="nav-link">
                 <i className="now-ui-icons media-2_sound-wave" />
                 <p>
                   <span className="d-lg-none d-md-block">Stats</span>
                 </p>
               </Link>
-            </NavItem>
+            </NavItem> */}
             <Dropdown
               nav
               isOpen={dropdownOpen}
               toggle={(e) => dropdownToggle(e)}
             >
-              <DropdownToggle caret nav>
+              {/* <DropdownToggle caret nav>
                 <i className="now-ui-icons location_world" />
                 <p>
                   <span className="d-lg-none d-md-block">Some Actions</span>
                 </p>
-              </DropdownToggle>
-              <DropdownMenu right>
+              </DropdownToggle> */}
+              {/* <DropdownMenu right>
                 <DropdownItem tag="a">Action</DropdownItem>
                 <DropdownItem tag="a">Another Action</DropdownItem>
                 <DropdownItem tag="a">Something else here</DropdownItem>
-              </DropdownMenu>
+              </DropdownMenu>  */}
             </Dropdown>
-            <NavItem>
+            {/* <NavItem>
               <Link to="#pablo" className="nav-link">
                 <i className="now-ui-icons users_single-02" />
                 <p>
                   <span className="d-lg-none d-md-block">Account</span>
                 </p>
               </Link>
-            </NavItem>
+            </NavItem>  */}
           </Nav>
         </Collapse>
       </Container>
